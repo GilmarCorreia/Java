@@ -1,0 +1,1 @@
+javac Principal.java scenes/*.java players/*.java boats/*.java boats/structs/*.java exceptions/*.java

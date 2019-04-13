@@ -1,0 +1,255 @@
+
+
+import java.util.Random;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+
+public class AI extends Application {
+    
+    
+    
+    private int campo[][] = new int [9][9];
+    
+         
+         
+    
+    
+    private int validaPosicao(int linha_ini, int coluna_ini, int linha_final, int coluna_final){
+       
+         
+         
+         
+        
+         if(linha_ini == linha_final && coluna_ini != coluna_final){
+             
+             for(;coluna_ini < coluna_final  ; coluna_ini++)
+                if(campo[linha_ini][coluna_ini] != 0)
+                    return -1;
+         }
+         else if (coluna_ini == coluna_final && linha_ini != linha_final){
+             
+             for(;linha_ini < linha_final ; linha_ini++)
+                if(campo[linha_ini][coluna_ini] != 0)
+                   return -1;
+            }
+         
+         else{
+             if(campo[linha_ini][coluna_ini] != 0)
+                return -1;
+             }
+          return 1;
+         }
+         
+         
+        
+    
+    public void posiciona(){
+        int teste = 0; // testa se a posicao e valida
+        int type = 1; // tipo de barco
+        
+        Random aleatorio = new Random(); 
+        int linha_1 =  aleatorio.nextInt(9);
+        int coluna_1 =  aleatorio.nextInt(9);
+        
+        campo[linha_1][coluna_1] = 1; // Submarino
+        
+        while(teste == 0){
+          
+            Random aleatorio_2 = new Random();
+            Random VerHor = new Random();
+            int linha_ini =  aleatorio_2.nextInt(8);
+            int coluna_ini =  aleatorio_2.nextInt(8);
+            int linha_final = linha_ini;
+            int coluna_final = coluna_ini;
+            int VertHori = VerHor.nextInt(1);
+            int valido_1 = 0, valido_2 = 0;
+            
+            if(VertHori == 1){
+                coluna_final = linha_ini + type;
+                 valido_1 = validaPosicao(linha_ini, linha_final , coluna_ini, coluna_final);
+            }
+                
+            else{
+                linha_final = linha_ini + type;
+                valido_2 = validaPosicao(linha_ini, linha_final , coluna_ini, coluna_final );
+            }
+                
+            
+            if(valido_1 != -1 || valido_2 != -1){
+                
+                teste = 1;
+                
+                if(linha_ini == linha_final && coluna_ini != coluna_final){
+             
+                    for(;coluna_ini < coluna_final ; coluna_ini++)
+                    campo[linha_ini][coluna_ini] = type;
+                    
+                }
+                else {
+             
+                    for(;linha_ini < linha_final ; linha_ini++)
+                    campo[linha_ini][coluna_ini] = type;
+                }
+            }
+            else
+                teste = 0;
+        }
+        
+        teste = 0;
+        type += 1;
+        
+        while(teste == 0){
+          
+            Random aleatorio_2 = new Random();
+            Random VerHor = new Random();
+            int linha_ini =  aleatorio_2.nextInt(8);
+            int coluna_ini =  aleatorio_2.nextInt(8);
+            int linha_final = linha_ini;
+            int coluna_final = coluna_ini;
+            int VertHori = VerHor.nextInt(1);
+            int valido_1 = 0, valido_2 = 0;
+            
+            if(VertHori == 1){
+                coluna_final = linha_ini + type;
+                 valido_1 = validaPosicao(linha_ini, linha_final , coluna_ini, coluna_final);
+            }
+                
+            else{
+                linha_final = linha_ini + type;
+                valido_2 = validaPosicao(linha_ini, linha_final , coluna_ini, coluna_final );
+            }
+                
+            
+            if(valido_1 != -1 || valido_2 != -1){
+                
+                teste = 1;
+                
+                if(linha_ini == linha_final && coluna_ini != coluna_final){
+             
+                    for(;coluna_ini < coluna_final ; coluna_ini++)
+                    campo[linha_ini][coluna_ini] = type;
+                    
+                }
+                else {
+             
+                    for(;linha_ini < linha_final ; linha_ini++)
+                    campo[linha_ini][coluna_ini] = type;
+                }
+            }
+            else
+                teste = 0;
+        }
+        
+        teste = 0;
+        type += 1;
+        
+        
+        while(teste == 0){
+          
+            Random aleatorio_2 = new Random();
+            Random VerHor = new Random();
+            int linha_ini =  aleatorio_2.nextInt(8);
+            int coluna_ini =  aleatorio_2.nextInt(8);
+            int linha_final = linha_ini;
+            int coluna_final = coluna_ini;
+            int VertHori = VerHor.nextInt(1);
+            int valido_1 = 0, valido_2 = 0;
+            
+            if(VertHori == 1){
+                coluna_final = linha_ini + type;
+                 valido_1 = validaPosicao(linha_ini, linha_final , coluna_ini, coluna_final);
+            }
+                
+            else{
+                linha_final = linha_ini + type;
+                valido_2 = validaPosicao(linha_ini, linha_final , coluna_ini, coluna_final );
+            }
+                
+            
+            if(valido_1 != -1 || valido_2 != -1){
+                
+                teste = 1;
+                
+                if(linha_ini == linha_final && coluna_ini != coluna_final){
+             
+                    for(;coluna_ini < coluna_final ; coluna_ini++)
+                    campo[linha_ini][coluna_ini] = type;
+                    
+                }
+                else {
+             
+                    for(;linha_ini < linha_final ; linha_ini++)
+                    campo[linha_ini][coluna_ini] = type;
+                }
+            }
+            else
+                teste = 0;
+        }
+        
+        teste = 0;
+        type += 1;
+        
+        
+        while(teste == 0){
+          
+            Random aleatorio_2 = new Random();
+            Random VerHor = new Random();
+            int linha_ini =  aleatorio_2.nextInt(8);
+            int coluna_ini =  aleatorio_2.nextInt(8);
+            int linha_final = linha_ini;
+            int coluna_final = coluna_ini;
+            int VertHori = VerHor.nextInt(1);
+            int valido_1 = 0, valido_2 = 0;
+            
+            if(VertHori == 1){
+                coluna_final = linha_ini + type;
+                 valido_1 = validaPosicao(linha_ini, linha_final , coluna_ini, coluna_final);
+            }
+                
+            else{
+                linha_final = linha_ini + type;
+                valido_2 = validaPosicao(linha_ini, linha_final , coluna_ini, coluna_final );
+            }
+                
+            
+            if(valido_1 != -1 || valido_2 != -1){
+                
+                teste = 1;
+                
+                if(linha_ini == linha_final && coluna_ini != coluna_final){
+             
+                    for(;coluna_ini < coluna_final ; coluna_ini++)
+                    campo[linha_ini][coluna_ini] = type;
+                    
+                }
+                else {
+             
+                    for(;linha_ini < linha_final ; linha_ini++)
+                    campo[linha_ini][coluna_ini] = type;
+                }
+            }
+            else
+                teste = 0;
+        }
+        
+    }
+    
+    
+    
+    //FALTA A FUNCAO ATIRA
+    
+    public void setCampo(int linha, int coluna, int valor){
+        this.campo[linha][coluna] = valor;
+    }
+
+   
+    public int getCampo(int linha, int coluna){
+        return campo[linha][coluna];
+    }
+}

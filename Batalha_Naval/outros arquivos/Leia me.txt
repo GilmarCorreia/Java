@@ -1,0 +1,5 @@
+E ae galera.
+
+Eu criei a classe Player e AI(máquina), mas ainda à coisas que eu identifico que faltam fazer, a funcao atira(classe player), eu não tinha entendido muito bem o que ela deveria retornar, a classe que trata as excessoes, a funcao atira(classe AI) porque tem tudo a ver com matriz de probabilidade e eu tinha pensado de uma maneira, mas o Gil me disse que era de outra forma, por isso não fiz e talvez se for necessário mudar, as funcoes para que ela recebam uma dimensao dinamica de tamanho de matriz, a versao que programei foi pensando no estado default do jogo, ou seja de 10x10.
+
+QUalquer coisa podem me perguntar, e se estiverem muito ocupados eu posso tentar achar mais um tempo para ajudar na integraçao de tudo.
